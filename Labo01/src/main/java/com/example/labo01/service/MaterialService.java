@@ -25,25 +25,4 @@ public class MaterialService {
                 .collect(Collectors.toList());
     }
 
-//No se usa porque no se muestra
-    public Materiales obtenerMaterialMasCaro() {
-        return materialRepository.findAll().stream()
-                .max(Comparator.comparing(Materiales::getPrecioRupias))
-                .orElse(null);
-    }
-
-
-    public List<Materiales> obtenerMaterialesLegendarios() {
-        return materialRepository.findAll().stream()
-                .filter(m -> "Legendario".equalsIgnoreCase(m.getGradoRareza()))
-                .collect(Collectors.toList());
-    }
-
-
-    public List<String> obtenerUbicacionesUnicas() {
-        return materialRepository.findAll().stream()
-                .map(Materiales::getUbicacionPrincipal)
-                .distinct()
-                .collect(Collectors.toList());
-    }
 }

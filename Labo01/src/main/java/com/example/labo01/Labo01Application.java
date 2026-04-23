@@ -20,7 +20,7 @@ public class Labo01Application {
 
 
             materialService.obtenerCatalogoOrdenadoPorPrecioDesc().forEach(m ->
-                    System.out.printf("[HYRULE-DB] Nombre: %s | Categoría: %s | Precio: %.0f Rupias%n",
+                    System.out.printf("[HYRULE-DB] Nombre: %s | Categoría: %s | Precio: %.0f Rupias%n ", //| Efecto: %s | Grado de rareza: %s | Ubicación principal: %s%n
                             m.getNombre(),
                             m.getCategoria(),
                             m.getPrecioRupias()
